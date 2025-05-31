@@ -1,0 +1,117 @@
+body {
+    padding-bottom: 2rem;
+}
+
+header {
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+}
+
+header .btn {
+    font-size: 1rem;
+}
+
+.btn.btn-link {
+    color: #3b4351;
+}
+
+.social-link-image {
+    height: 24px;
+}
+
+table {
+    margin-bottom: 1.2rem;
+}
+
+/* Less padding for table cells */
+.table td,
+.table th {
+    padding: .4rem .4rem;
+}
+
+.divider {
+    margin-bottom: 1.2rem;
+}
+
+/* Make the headings a little smaller than Spectre defaults */
+
+h1,
+.h1 {
+  font-size: 1.8rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.4rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.2rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.1rem;
+}
+
+/* Blog */
+
+.blog .preview,
+.blog-tags-top {
+    margin-bottom: 2rem;
+}
+
+.blog .preview-title,
+.post-title {
+    margin-bottom: 0.3rem;
+}
+
+.blog .preview-body {
+    margin-top: 0.8rem;
+}
+
+.post-body {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.preview-meta,
+.post-meta {
+    font-size: 80%;
+}
+
+.preview-tags,
+.post-tags {
+    margin-left: 0.6rem;
+}
+
+.preview-tag,
+.post-tag {
+    margin-left: 0.2rem;
+}
+
+.post-footer-link {
+    margin-bottom: 0.4rem;
+}
+
+.blog-tag-top {
+    display: inline-block;
+    margin-right: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.blog-tag-side {
+    margin-bottom: 0.4rem;
+    margin-right: 0.1rem;
+}
+
+@media (min-width: 481px) {
+    .post-footer-link-index {
+        text-align: center;
+    }
+
+    .post-footer-link-next {
+        text-align: right;
+    }
+}

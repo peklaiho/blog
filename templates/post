@@ -1,0 +1,31 @@
+<div class="post post-{{ filename }}">
+    <h1 class="post-title">{{ page_title }}</h1>
+    <div class="post-meta">
+        <span class="post-date">
+            {{ pretty_date }}{% if pretty_edited %} &nbsp; &mdash; &nbsp; edited {{ pretty_edited }}{% endif %}
+        </span>
+        <span class="post-tags">
+        {% for tag in tags %}
+            <span class="post-tag"><a href="../tag-{{ tag }}.html" class="label label-rounded">{{ tag }}</a></span>
+        {% endfor %}
+        </span>
+    </div>
+    <div class="post-body">
+    {{ content }}
+    </div>
+    <div class="columns post-footer">
+        {% if previous %}
+        <div class="column col-4 col-xs-12 post-footer-link post-footer-link-previous">
+            <a href="{{ previous.path }}">Previous: {{ previous.page_title }}</a>
+        </div>
+        {% endif %}
+        <div class="column col-4 col-xs-12 post-footer-link post-footer-link-index">
+            <a href="../">Index</a>
+        </div>
+        {% if next %}
+        <div class="column col-4 col-xs-12 post-footer-link post-footer-link-next">
+            <a href="{{ next.path }}">Next: {{ next.page_title }}</a>
+        </div>
+        {% endif %}
+    </div>
+</div>

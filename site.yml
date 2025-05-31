@@ -1,0 +1,62 @@
+# Name of the site, used in title (required)
+title: Pekka Laiho
+
+# Full URL of the site with trailing slash (required)
+url: https://laihoconsulting.com/
+
+# Meta description (optional but recommended)
+description: Website and personal blog of Pekka Laiho, software engineer and financial enthusiast.
+
+# Author (optional)
+author: Pekka Laiho
+
+# Favicon (optional but recommended)
+icon: favicon.png
+
+# Site language (optional but recommended)
+lang: en
+
+# Main image (optional, used in social media metadata)
+image: atlas.png
+
+# Additional metadata
+meta: {
+  # Open Graph (Facebook)
+  og: true,
+  # Twitter Card
+  twitter: false
+}
+
+# Generate RSS feed
+rss: true
+
+# Social links
+socials: {
+  github: https://github.com/peklaiho,
+  x: https://x.com/peklaiho
+}
+
+# CSS-files
+css: [
+  spectre.min.css,
+  hljs-default.css,
+  style.css
+]
+
+# Image files
+img: [
+  github.png,
+  x.png
+]
+
+# Menu
+menu: [
+  home,
+  about,
+  blog
+]
+
+# CSS-classes for HTML elements
+classes: {
+  table: table
+}

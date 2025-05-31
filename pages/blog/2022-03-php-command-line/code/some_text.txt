@@ -1,0 +1,4 @@
+lets try if php can make this
+text uppercase or if something
+weird will happen like the cpu
+will explode?

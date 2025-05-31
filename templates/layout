@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% if lang %}
+<html lang="{{ lang }}">
+{% else %}
+<html>
+{% endif %}
+<head>
+    <meta charset="utf-8" />
+    <title>
+    {% if home %}
+        {{ site_title }}
+    {% else %}
+        {{ page_title }} | {{ site_title }}
+    {% endif %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content="Stagger" />
+    {% if description %}
+    <meta name="description" content="{{ description }}" />
+    {% endif %}
+    {% if author %}
+    <meta name="author" content="{{ author }}" />
+    {% endif %}
+    {% if icon %}
+    <link rel="icon" type="{{ icon.filetype }}" href="/{{ icon.filename }}" />
+    {% endif %}
+    <link rel="canonical" href="{{ page_url }}" />
+    {% if rss_url %}
+    <link rel="alternate" title="RSS Feed for Blog of {{ author }}" type="application/rss+xml" href="{{ rss_url }}" />
+    {% endif %}
+    {% if meta.og %}
+        <meta property="og:site_name" content="{{ site_title }}" />
+        <meta property="og:title" content="{{ page_title }}" />
+        {% if description %}
+        <meta property="og:description" content="{{ description }}" />
+        {% endif %}
+        <meta property="og:url" content="{{ page_url }}" />
+        {% if page_image %}
+        <meta property="og:image" content="{{ page_url }}{{ page_image }}" />
+        {% elseif site_image %}
+        <meta property="og:image" content="{{ site_url }}{{ site_image.filename }}" />
+        {% endif %}
+        {% if pagetype == 'post' %}
+        <meta property="og:type" content="article" />
+        {% else %}
+        <meta property="og:type" content="website" />
+        {% endif %}
+    {% endif %}
+    {% if meta.twitter %}
+        <meta name="twitter:title" content="{{ page_title }}" />
+        {% if description %}
+        <meta name="twitter:description" content="{{ description }}" />
+        {% endif %}
+        {% if page_image %}
+        <meta name="twitter:image" content="{{ page_url }}{{ page_image }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+        {% elseif site_image %}
+        <meta name="twitter:image" content="{{ site_url }}{{ site_image.filename }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+        {% else %}
+        <meta name="twitter:card" content="summary" />
+        {% endif %}
+    {% endif %}
+    {% for cssfile in css %}
+    <link rel="stylesheet" type="text/css" href="/css/{{ cssfile }}" />
+    {% endfor %}
+    {% for jsfile in js %}
+    <script src="/js/{{ jsfile }}"></script>
+    {% endfor %}
+</head>
+<body>
+    <div class="container grid-lg">
+        <div class="columns">
+            <div class="column col-12">
+                <header class="navbar">
+                    <section class="navbar-section">
+                    </section>
+                    <section class="navbar-section">
+                    {% for mpath, mname in menu %}
+                    {% if path == mpath %}
+                    <a href="{{ mpath }}" class="btn btn-link active">{{ mname }}</a>
+                    {% else %}
+                    <a href="{{ mpath }}" class="btn btn-link">{{ mname }}</a>
+                    {% endif %}
+                    {% endfor %}
+                    <!-- Social Links -->
+                    {% if socials.github %}
+                        <a href="{{ socials.github }}" target="_blank" class="btn btn-link" title="Profile on GitHub">
+                            <img src="/img/github.png" alt="Profile on GitHub" class="social-link-image" />
+                        </a>
+                    {% endif %}
+                    {% if socials.x %}
+                        <a href="{{ socials.x }}" target="_blank" class="btn btn-link" title="Profile on X">
+                            <img src="/img/x.png" alt="Profile on X" class="social-link-image" />
+                        </a>
+                    {% endif %}
+                    </section>
+                </header>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column col-12">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
