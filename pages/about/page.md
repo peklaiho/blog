@@ -2,7 +2,7 @@
 title: About
 ---
 
-# About
+# About Me
 
 Here are some links to the companies and projects I am associated with.
 

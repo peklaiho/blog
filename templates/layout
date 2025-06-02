@@ -73,28 +73,30 @@
         <div class="columns">
             <div class="column col-12">
                 <header class="navbar">
-                    <section class="navbar-section">
-                    </section>
-                    <section class="navbar-section">
-                    {% for mpath, mname in menu %}
-                    {% if path == mpath %}
-                    <a href="{{ mpath }}" class="btn btn-link active">{{ mname }}</a>
-                    {% else %}
-                    <a href="{{ mpath }}" class="btn btn-link">{{ mname }}</a>
-                    {% endif %}
-                    {% endfor %}
-                    <!-- Social Links -->
-                    {% if socials.github %}
-                        <a href="{{ socials.github }}" target="_blank" class="btn btn-link" title="Profile on GitHub">
-                            <img src="/img/github.png" alt="Profile on GitHub" class="social-link-image" />
-                        </a>
-                    {% endif %}
-                    {% if socials.x %}
-                        <a href="{{ socials.x }}" target="_blank" class="btn btn-link" title="Profile on X">
-                            <img src="/img/x.png" alt="Profile on X" class="social-link-image" />
-                        </a>
-                    {% endif %}
-                    </section>
+                    <div class="navbar-section">
+                    </div>
+                    <div class="navbar-section">
+                        <nav>
+                            {% for mpath, mname in menu %}
+                            {% if path == mpath %}
+                            <a href="{{ mpath }}" class="btn btn-link active">{{ mname }}</a>
+                            {% else %}
+                            <a href="{{ mpath }}" class="btn btn-link">{{ mname }}</a>
+                            {% endif %}
+                            {% endfor %}
+                            <!-- Social Links -->
+                            {% if socials.github %}
+                            <a href="{{ socials.github }}" target="_blank" class="btn btn-link" title="Profile on GitHub">
+                                <img src="/img/github.png" alt="Profile on GitHub" class="social-link-image" />
+                            </a>
+                            {% endif %}
+                            {% if socials.x %}
+                            <a href="{{ socials.x }}" target="_blank" class="btn btn-link" title="Profile on X">
+                                <img src="/img/x.png" alt="Profile on X" class="social-link-image" />
+                            </a>
+                            {% endif %}
+                        </nav>
+                    </div>
                 </header>
                 <div class="divider"></div>
             </div>

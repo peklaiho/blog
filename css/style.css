@@ -58,7 +58,9 @@ h4,
 /* Blog */
 
 .blog .preview,
-.blog-tags-top {
+.blog .heading,
+.blog-tags-top
+{
     margin-bottom: 2rem;
 }
 
