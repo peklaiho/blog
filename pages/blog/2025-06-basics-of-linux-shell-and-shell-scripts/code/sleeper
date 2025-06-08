@@ -1,0 +1,12 @@
+#!/bin/bash
+#echo "Sleeper running, PID $$"
+
+handle_sigusr1() {
+    echo "Received SIGUSR1 signal!"
+}
+
+trap handle_sigusr1 SIGUSR1
+
+while true; do
+    sleep 1
+done
